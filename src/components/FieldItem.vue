@@ -1,7 +1,7 @@
 <template>
   <div class="field-item" :class="`layout-${layout}`" :style="fieldStyle">
     <div class="field-content">
-      <label class="field-label" :style="labelStyle" v-text="field.label || field.key"></label>
+      <label class="field-label" :style="labelStyle" v-text="displayLabel"></label>
       <div class="field-value" :style="valueStyle" v-text="displayValue"></div>
     </div>
     <div v-if="showDivider" class="field-divider" :style="dividerStyle"></div>
@@ -77,11 +77,18 @@ export default {
       return val === null || val === undefined || val === '';
     });
 
+    const displayLabel = computed(() => {
+      const label = props.field?.label || props.field?.key || '';
+      // Debug: log to console
+      console.log('Field label:', label, 'Type:', typeof label);
+      return String(label);
+    });
+
     const displayValue = computed(() => {
       if (isEmpty.value) {
         return props.emptyValueText;
       }
-      return props.field.valor;
+      return String(props.field.valor);
     });
 
     const fieldStyle = computed(() => {
@@ -118,6 +125,7 @@ export default {
 
     return {
       isEmpty,
+      displayLabel,
       displayValue,
       fieldStyle,
       labelStyle,
