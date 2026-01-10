@@ -79,8 +79,6 @@ export default {
 
     const displayLabel = computed(() => {
       const label = props.field?.label || props.field?.key || '';
-      // Debug: log to console
-      console.log('Field label:', label, 'Type:', typeof label);
       return String(label);
     });
 
