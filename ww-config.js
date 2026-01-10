@@ -29,39 +29,6 @@ export default {
     },
 
     // Display Settings
-    showCreatedDate: {
-      label: {
-        en: 'Show Created Date',
-        pt: 'Mostrar Data de Criação'
-      },
-      type: 'OnOff',
-      section: 'settings',
-      defaultValue: true,
-      /* wwEditor:start */
-      propertyHelp: {
-        tooltip: 'Display the response creation date'
-      }
-      /* wwEditor:end */
-    },
-
-    dateFormat: {
-      label: {
-        en: 'Date Format',
-        pt: 'Formato da Data'
-      },
-      type: 'TextSelect',
-      section: 'settings',
-      defaultValue: 'full',
-      options: {
-        options: [
-          { value: 'full', label: 'Full (DD/MM/YYYY HH:mm)' },
-          { value: 'date', label: 'Date only (DD/MM/YYYY)' },
-          { value: 'relative', label: 'Relative (2 hours ago)' }
-        ]
-      },
-      hidden: content => !content.showCreatedDate
-    },
-
     emptyValueText: {
       label: {
         en: 'Empty Value Text',
@@ -175,56 +142,6 @@ export default {
       options: {
         unitChoices: [
           { value: 'px', label: 'px', min: 0, max: 10 }
-        ]
-      }
-    },
-
-    // Style - Header (Date)
-    headerBackgroundColor: {
-      label: {
-        en: 'Header Background',
-        pt: 'Fundo do Cabeçalho'
-      },
-      type: 'Color',
-      section: 'style',
-      defaultValue: '#081B4E',
-      options: {
-        nullable: true
-      }
-    },
-
-    headerTextColor: {
-      label: {
-        en: 'Header Text Color',
-        pt: 'Cor do Texto do Cabeçalho'
-      },
-      type: 'Color',
-      section: 'style',
-      defaultValue: '#ffffff'
-    },
-
-    headerPadding: {
-      label: {
-        en: 'Header Padding',
-        pt: 'Padding do Cabeçalho'
-      },
-      type: 'Length',
-      section: 'style',
-      defaultValue: '16px 24px'
-    },
-
-    headerFontSize: {
-      label: {
-        en: 'Header Font Size',
-        pt: 'Tamanho da Fonte do Cabeçalho'
-      },
-      type: 'Length',
-      section: 'style',
-      defaultValue: '14px',
-      responsive: true,
-      options: {
-        unitChoices: [
-          { value: 'px', label: 'px', min: 10, max: 24 }
         ]
       }
     },
