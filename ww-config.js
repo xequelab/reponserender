@@ -4,7 +4,7 @@ export default {
       en: 'Response Renderer',
       pt: 'Renderizador de Respostas'
     },
-    icon: 'file-text'
+    icon: 'fontawesome/solid/file-alt'
   },
   properties: {
     // Data Input
