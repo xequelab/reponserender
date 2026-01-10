@@ -1,12 +1,8 @@
 <template>
   <div class="field-item" :class="`layout-${layout}`" :style="fieldStyle">
     <div class="field-content">
-      <label class="field-label" :style="labelStyle">
-        {{ field.label || field.key }}
-      </label>
-      <div class="field-value" :style="valueStyle">
-        {{ displayValue }}
-      </div>
+      <label class="field-label" :style="labelStyle" v-text="field.label || field.key"></label>
+      <div class="field-value" :style="valueStyle" v-text="displayValue"></div>
     </div>
     <div v-if="showDivider" class="field-divider" :style="dividerStyle"></div>
   </div>
