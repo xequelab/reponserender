@@ -1,8 +1,11 @@
 {
   "name": "ww-response-renderer",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "WeWeb component to render form responses stored in JSON format",
   "main": "ww-config.js",
+  "weweb": {
+    "componentPath": "ww-config.js"
+  },
   "scripts": {
     "build": "weweb build",
     "serve": "weweb serve"

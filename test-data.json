@@ -1,0 +1,44 @@
+{
+  "id": "test-123",
+  "criado_em": "2024-01-15T10:30:00",
+  "dados": {
+    "campos": [
+      {
+        "key": "nome",
+        "label": "Nome Completo",
+        "valor": "João Silva",
+        "tipo": "text"
+      },
+      {
+        "key": "email",
+        "label": "E-mail",
+        "valor": "joao@exemplo.com.br",
+        "tipo": "email"
+      },
+      {
+        "key": "telefone",
+        "label": "Telefone",
+        "valor": "(11) 98765-4321",
+        "tipo": "phone"
+      },
+      {
+        "key": "website",
+        "label": "Website",
+        "valor": "https://exemplo.com.br",
+        "tipo": "url"
+      },
+      {
+        "key": "mensagem",
+        "label": "Mensagem",
+        "valor": "Esta é uma mensagem de teste para validar o componente.",
+        "tipo": "textarea"
+      },
+      {
+        "key": "vazio",
+        "label": "Campo Vazio",
+        "valor": "",
+        "tipo": "text"
+      }
+    ]
+  }
+}
